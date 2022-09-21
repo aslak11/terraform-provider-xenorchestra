@@ -33,15 +33,15 @@ func dataSourceXoaStorageRepository() *schema.Resource {
 				Computed: true,
 			},
 			"size": &schema.Schema{
-				Type:     schema.TypeInt,
+				Type:     schema.TypeFloat,
 				Computed: true,
 			},
 			"physical_usage": &schema.Schema{
-				Type:     schema.TypeInt,
+				Type:     schema.TypeFloat,
 				Computed: true,
 			},
 			"usage": &schema.Schema{
-				Type:     schema.TypeInt,
+				Type:     schema.TypeFloat,
 				Computed: true,
 			},
 			"tags": resourceTags(),

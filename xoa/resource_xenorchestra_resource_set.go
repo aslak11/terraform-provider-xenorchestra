@@ -49,7 +49,7 @@ func resourceResourceSet() *schema.Resource {
 							ValidateFunc: validation.StringInSlice(validLimitType, false),
 						},
 						"quantity": &schema.Schema{
-							Type:     schema.TypeInt,
+							Type:     schema.TypeFloat,
 							Required: true,
 						},
 					},

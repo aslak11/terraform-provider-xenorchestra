@@ -124,12 +124,12 @@ func resourceVmSchema() map[string]*schema.Schema {
 			Default:  false,
 		},
 		"cpu_cap": &schema.Schema{
-			Type:     schema.TypeInt,
+			Type:     schema.TypeFloat,
 			Optional: true,
 			Default:  0,
 		},
 		"cpu_weight": &schema.Schema{
-			Type:     schema.TypeInt,
+			Type:     schema.TypeFloat,
 			Optional: true,
 			Default:  0,
 		},
@@ -166,12 +166,12 @@ func resourceVmSchema() map[string]*schema.Schema {
 			ValidateFunc: validation.StringInSlice(validVga, false),
 		},
 		"videoram": &schema.Schema{
-			Type:     schema.TypeInt,
+			Type:     schema.TypeFloat,
 			Default:  8,
 			Optional: true,
 		},
 		"start_delay": &schema.Schema{
-			Type:     schema.TypeInt,
+			Type:     schema.TypeFloat,
 			Default:  0,
 			Optional: true,
 		},
@@ -283,7 +283,7 @@ func resourceVmSchema() map[string]*schema.Schema {
 						Optional: true,
 					},
 					"size": &schema.Schema{
-						Type:     schema.TypeInt,
+						Type:     schema.TypeFloat,
 						Required: true,
 					},
 					"attached": &schema.Schema{

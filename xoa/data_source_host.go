@@ -45,11 +45,11 @@ func resourceHostSchema() map[string]*schema.Schema {
 			Elem:     &schema.Schema{Type: schema.TypeInt},
 		},
 		"memory": &schema.Schema{
-			Type:     schema.TypeInt,
+			Type:     schema.TypeFloat,
 			Computed: true,
 		},
 		"memory_usage": &schema.Schema{
-			Type:     schema.TypeInt,
+			Type:     schema.TypeFloat,
 			Computed: true,
 		},
 		"tags": resourceTags(),
