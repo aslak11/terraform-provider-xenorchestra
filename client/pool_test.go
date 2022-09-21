@@ -11,9 +11,9 @@ func TestPoolCompare(t *testing.T) {
 		{
 			other: Pool{
 				Id:        "sample pool id",
-				NameLabel: "xenserver-ddelnano",
+				NameLabel: "xenserver-aslak11",
 			},
-			pool:   Pool{NameLabel: "xenserver-ddelnano"},
+			pool:   Pool{NameLabel: "xenserver-aslak11"},
 			result: true,
 		},
 		{
@@ -21,7 +21,7 @@ func TestPoolCompare(t *testing.T) {
 				Id:        "sample pool id",
 				NameLabel: "does not match",
 			},
-			pool:   Pool{NameLabel: "xenserver-ddelnano"},
+			pool:   Pool{NameLabel: "xenserver-aslak11"},
 			result: false,
 		},
 	}

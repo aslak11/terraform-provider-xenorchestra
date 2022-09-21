@@ -5,7 +5,7 @@ import (
 	"flag"
 	"log"
 
-	"github.com/ddelnano/terraform-provider-xenorchestra/xoa"
+	"github.com/aslak11/terraform-provider-xenorchestra/xoa"
 	"github.com/hashicorp/terraform-plugin-sdk/v2/plugin"
 )
 
@@ -16,7 +16,7 @@ func main() {
 	flag.Parse()
 
 	if debugMode {
-		err := plugin.Debug(context.Background(), "registry.terraform.io/terra-farm/xenorchestra",
+		err := plugin.Debug(context.Background(), "registry.terraform.io/aslak11/xenorchestra",
 			&plugin.ServeOpts{
 				ProviderFunc: xoa.Provider,
 			})

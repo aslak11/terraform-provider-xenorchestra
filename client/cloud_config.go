@@ -44,7 +44,7 @@ func (c *Client) GetCloudConfig(id string) (*CloudConfig, error) {
 		}
 	}
 
-	// TODO: This should return a NotFound error (see https://github.com/terra-farm/terraform-provider-xenorchestra/issues/118)
+	// TODO: This should return a NotFound error (see https://github.com/aslak11/terraform-provider-xenorchestra/issues/118)
 	// for more details
 	return nil, nil
 }

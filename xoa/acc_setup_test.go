@@ -6,7 +6,7 @@ import (
 	"os"
 	"testing"
 
-	"github.com/ddelnano/terraform-provider-xenorchestra/client"
+	"github.com/aslak11/terraform-provider-xenorchestra/client"
 	"github.com/hashicorp/terraform-plugin-sdk/v2/helper/resource"
 )
 

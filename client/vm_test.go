@@ -81,7 +81,7 @@ var vmObjectWithNumericVideoram string = `
 var data string = `
 {
   "6944cce9-5ce0-a853-ee9c-bcc8281b597f": {
-    "body": "VM 'Test VM' started on host: xenserver-ddelnano (uuid: a5c7d15c-2724-47ce-8e30-77f21f08bb4c)",
+    "body": "VM 'Test VM' started on host: xenserver-aslak11 (uuid: a5c7d15c-2724-47ce-8e30-77f21f08bb4c)",
     "name": "VM_STARTED",
     "time": 1547577637,
     "$object": "5f318ba2-2300-cc34-3710-f64f53634ac0",
@@ -92,7 +92,7 @@ var data string = `
     "$poolId": "cadf25ab-91ff-6fc0-041f-5a7033c4bc78"
   },
   "52e21132-2f4f-3b80-ef65-7d43750eb6db": {
-    "body": "VM 'XOA' started on host: xenserver-ddelnano (uuid: a5c7d15c-2724-47ce-8e30-77f21f08bb4c)",
+    "body": "VM 'XOA' started on host: xenserver-aslak11 (uuid: a5c7d15c-2724-47ce-8e30-77f21f08bb4c)",
     "name": "VM_STARTED",
     "time": 1547578119,
     "$object": "9df00260-c6d8-6cd4-4b24-d9e23602bf95",
@@ -103,7 +103,7 @@ var data string = `
     "$poolId": "cadf25ab-91ff-6fc0-041f-5a7033c4bc78"
   },
   "3bdc3bed-2a91-12af-5154-097706009593": {
-    "body": "VM 'XOA' started on host: xenserver-ddelnano (uuid: a5c7d15c-2724-47ce-8e30-77f21f08bb4c)",
+    "body": "VM 'XOA' started on host: xenserver-aslak11 (uuid: a5c7d15c-2724-47ce-8e30-77f21f08bb4c)",
     "name": "VM_STARTED",
     "time": 1547578434,
     "$object": "2e793135-3b3d-354e-46c4-ef99fe0a37d0",

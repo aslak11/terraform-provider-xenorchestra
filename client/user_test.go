@@ -9,7 +9,7 @@ func TestGetUser(t *testing.T) {
 	c, err := NewClient(GetConfigFromEnv())
 
 	expectedUser := User{
-		Email:    "ddelnano",
+		Email:    "aslak11",
 		Password: "password",
 	}
 

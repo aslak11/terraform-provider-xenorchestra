@@ -4,8 +4,8 @@ import (
 	"fmt"
 	"testing"
 
-	"github.com/ddelnano/terraform-provider-xenorchestra/client"
-	"github.com/ddelnano/terraform-provider-xenorchestra/xoa/internal"
+	"github.com/aslak11/terraform-provider-xenorchestra/client"
+	"github.com/aslak11/terraform-provider-xenorchestra/xoa/internal"
 	"github.com/hashicorp/terraform-plugin-sdk/v2/helper/resource"
 	"github.com/hashicorp/terraform-plugin-sdk/v2/terraform"
 )

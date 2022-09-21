@@ -4,7 +4,7 @@ package client
 // github.com/hashicorp/terraform-plugin-sdk/helper/resource
 // package. In order for this client to work with github.com/GoogleCloudPlatform/terraformer
 // the terraform sdk cannot be used otherwise some package initialization code causes a runtime crash.
-// See https://github.com/ddelnano/terraformer/commit/03999bce04c47c95957b2d569307c3ab9e80763f#comments
+// See https://github.com/aslak11/terraformer/commit/03999bce04c47c95957b2d569307c3ab9e80763f#comments
 // for more details.
 
 // Ideally the xenorchestra client code would be completely decoupled from terraform and so this approach
