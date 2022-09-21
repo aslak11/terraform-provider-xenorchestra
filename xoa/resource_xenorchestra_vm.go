@@ -138,7 +138,7 @@ func resourceVmSchema() map[string]*schema.Schema {
 			Required: true,
 		},
 		"memory_max": &schema.Schema{
-			Type:     schema.TypeInt,
+			Type:     schema.TypeFloat,
 			Required: true,
 		},
 		"resource_set": &schema.Schema{
@@ -1184,20 +1184,19 @@ type guestNetwork map[string][]string
 // of maps where each element represents a network interface.
 // Each map will contain the following keys: ip, ipv4 and ipv6. The values
 // will be a slice of ip addresses.
-// []map[string][]string{
-//   {
-//     "ip":   []string{"interface 1's IPs",
-//     "ipv4": []string{"interface 1's IPs",
-//     "ipv6": []string{"ip1", "ip2"}
-//   },
-//   {
-//     "ip":   []string{"interface 2's IPs",
-//     "ipv4": []string{"interface 2's IPs",
-//     "ipv6": []string{"ip1", "ip2"}
-//   },
-// }
 //
-//
+//	[]map[string][]string{
+//	  {
+//	    "ip":   []string{"interface 1's IPs",
+//	    "ipv4": []string{"interface 1's IPs",
+//	    "ipv6": []string{"ip1", "ip2"}
+//	  },
+//	  {
+//	    "ip":   []string{"interface 2's IPs",
+//	    "ipv4": []string{"interface 2's IPs",
+//	    "ipv6": []string{"ip1", "ip2"}
+//	  },
+//	}
 func extractIpsFromNetworks(networks map[string]string) []guestNetwork {
 
 	if len(networks) < 1 {
