@@ -17,8 +17,8 @@ type Host struct {
 }
 
 type HostMemoryObject struct {
-	Usage int `json:"usage"`
-	Size  int `json:"size"`
+	Usage float64 `json:"usage"`
+	Size  float64 `json:"size"`
 }
 
 func (h Host) Compare(obj interface{}) bool {

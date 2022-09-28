@@ -357,7 +357,7 @@ func resourceVmCreate(d *schema.ResourceData, m interface{}) error {
 				SrId:            vdi["sr_id"].(string),
 				NameLabel:       vdi["name_label"].(string),
 				NameDescription: vdi["name_description"].(string),
-				Size:            vdi["size"].(int),
+				Size:            vdi["size"].(float64),
 			},
 		})
 	}
@@ -416,8 +416,8 @@ func resourceVmCreate(d *schema.ResourceData, m interface{}) error {
 		},
 		CloudNetworkConfig: d.Get("cloud_network_config").(string),
 		Memory: client.MemoryObject{
-			Static: []int{
-				0, d.Get("memory_max").(int),
+			Static: []float64{
+				0, d.Get("memory_max").(float64),
 			},
 		},
 		Tags:         vmTags,
@@ -429,7 +429,7 @@ func resourceVmCreate(d *schema.ResourceData, m interface{}) error {
 		StartDelay: d.Get("start_delay").(int),
 		WaitForIps: d.Get("wait_for_ip").(bool),
 		Videoram: client.Videoram{
-			Value: d.Get("videoram").(int),
+			Value: d.Get("videoram").(float64),
 		},
 		Vga: d.Get("vga").(string),
 	},
@@ -607,7 +607,7 @@ func resourceVmUpdate(d *schema.ResourceData, m interface{}) error {
 			Id: d.Get("resource_set").(string),
 		}
 	}
-	memoryMax := d.Get("memory_max").(int)
+	memoryMax := d.Get("memory_max").(float64)
 
 	vm, err := c.GetVm(client.Vm{Id: id})
 
@@ -733,7 +733,7 @@ func resourceVmUpdate(d *schema.ResourceData, m interface{}) error {
 		haltForUpdates = true
 	}
 
-	if _, nMemoryMax := d.GetChange("memory_max"); d.HasChange("memory_max") && nMemoryMax.(int) > vm.Memory.Static[1] {
+	if _, nMemoryMax := d.GetChange("memory_max"); d.HasChange("memory_max") && nMemoryMax.(float64) > vm.Memory.Static[1] {
 		haltForUpdates = true
 	}
 
@@ -761,7 +761,7 @@ func resourceVmUpdate(d *schema.ResourceData, m interface{}) error {
 			Number: cpus,
 		},
 		Memory: client.MemoryObject{
-			Static: []int{
+			Static: []float64{
 				0, memoryMax,
 			},
 		},
@@ -781,7 +781,7 @@ func resourceVmUpdate(d *schema.ResourceData, m interface{}) error {
 			Firmware: d.Get("hvm_boot_firmware").(string),
 		},
 		Videoram: client.Videoram{
-			Value: d.Get("videoram").(int),
+			Value: d.Get("videoram").(float64),
 		},
 	}
 	if haltForUpdates {
@@ -858,7 +858,7 @@ func expandDisks(disks []interface{}) []client.Disk {
 				NameLabel:       data["name_label"].(string),
 				NameDescription: data["name_description"].(string),
 				SrId:            data["sr_id"].(string),
-				Size:            data["size"].(int),
+				Size:            data["size"].(float64),
 			},
 		})
 	}
@@ -1029,7 +1029,7 @@ func diskHash(value interface{}) int {
 	var srId string
 	var nameLabel string
 	var nameDescription string
-	var size int
+	var size float64
 	var attached bool
 	switch t := value.(type) {
 	case client.Disk:
@@ -1042,7 +1042,7 @@ func diskHash(value interface{}) int {
 		srId = t["sr_id"].(string)
 		nameLabel = t["name_label"].(string)
 		nameDescription = t["name_description"].(string)
-		size = t["size"].(int)
+		size = t["size"].(float64)
 		attached = t["attached"].(bool)
 	default:
 		panic(fmt.Sprintf("disk cannot be hashed with type %T", t))

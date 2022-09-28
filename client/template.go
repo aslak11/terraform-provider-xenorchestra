@@ -7,11 +7,11 @@ import (
 )
 
 type TemplateDisk struct {
-	Bootable bool   `json:"bootable"`
-	Device   string `json:"device"`
-	Size     int    `json:"size"`
-	Type     string `json:"type"`
-	SR       string `json:"SR"`
+	Bootable bool    `json:"bootable"`
+	Device   string  `json:"device"`
+	Size     float64 `json:"size"`
+	Type     string  `json:"type"`
+	SR       string  `json:"SR"`
 }
 
 type TemplateInfo struct {

@@ -22,20 +22,20 @@ type CPUs struct {
 }
 
 type MemoryObject struct {
-	Dynamic []int `json:"dynamic"`
-	Static  []int `json:"static"`
-	Size    int   `json:"size"`
+	Dynamic []float64 `json:"dynamic"`
+	Static  []float64 `json:"static"`
+	Size    float64   `json:"size"`
 }
 
 type Boot struct {
 	Firmware string `json:"firmware,omitempty"`
 }
 
-// The XO api sometimes returns the videoram field as an int
+// The XO api sometimes returns the videoram field as an float64
 // and sometimes as a string. This overrides the default json
 // unmarshalling so that we can handle both of these cases
 type Videoram struct {
-	Value int `json:"-"`
+	Value float64 `json:"-"`
 }
 
 func (v *Videoram) UnmarshalJSON(data []byte) (err error) {
@@ -51,7 +51,7 @@ func (v *Videoram) UnmarshalJSON(data []byte) (err error) {
 			}
 
 		}
-		v.Value = num
+		v.Value = float64(num)
 		return nil
 	}
 
@@ -562,7 +562,7 @@ func FindOrCreateVmForTests(vm *Vm, poolId, srId, templateName, tag string) {
 					Number: 1,
 				},
 				Memory: MemoryObject{
-					Static: []int{
+					Static: []float64{
 						0, 2147483648,
 					},
 				},

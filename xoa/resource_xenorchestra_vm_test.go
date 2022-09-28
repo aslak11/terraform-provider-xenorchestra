@@ -87,7 +87,7 @@ func Test_diskHash(t *testing.T) {
 	nameLabel := "name label"
 	nameDescription := "name description"
 	attached := true
-	size := 1000
+	size := 1000.0
 	srId := "sr id"
 	cases := []struct {
 		clientDisk client.Disk

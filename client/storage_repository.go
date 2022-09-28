@@ -13,9 +13,9 @@ type StorageRepository struct {
 	PoolId        string   `json:"$poolId"`
 	SRType        string   `json:"SR_type"`
 	Container     string   `json:"$container"`
-	PhysicalUsage int      `json:"physical_usage"`
-	Size          int      `json:"size"`
-	Usage         int      `json:"usage"`
+	PhysicalUsage float64  `json:"physical_usage"`
+	Size          float64  `json:"size"`
+	Usage         float64  `json:"usage"`
 	Tags          []string `json:"tags,omitempty"`
 }
 

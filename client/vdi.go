@@ -15,7 +15,7 @@ type VDI struct {
 	SrId            string   `json:"$SR"`
 	NameLabel       string   `json:"name_label"`
 	NameDescription string   `json:"name_description"`
-	Size            int      `json:"size"`
+	Size            float64  `json:"size"`
 	VBDs            []string `json:"$VBDs"`
 	PoolId          string   `json:"$poolId"`
 	Tags            []string `json:"tags,omitempty"`
