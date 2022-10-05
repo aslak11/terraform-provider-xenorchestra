@@ -171,7 +171,7 @@ func resourceVmSchema() map[string]*schema.Schema {
 			Optional: true,
 		},
 		"start_delay": &schema.Schema{
-			Type:     schema.TypeFloat,
+			Type:     schema.TypeInt,
 			Default:  0,
 			Optional: true,
 		},
