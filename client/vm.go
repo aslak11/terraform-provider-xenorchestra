@@ -115,7 +115,7 @@ type Vm struct {
 	Tags       []string `json:"tags"`
 	Videoram   Videoram `json:"videoram,omitempty"`
 	Vga        string   `json:"vga,omitempty"`
-	StartDelay int      `json:startDelay,omitempty"`
+	StartDelay int      `json:"startDelay,omitempty"`
 	Host       string   `json:"$container"`
 
 	// These fields are used for passing in disk inputs when
